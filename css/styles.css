@@ -11,16 +11,23 @@ header {
     background: #007BFF;
     color: #fff;
     padding: 1rem 0;
-    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header img {
     height: 50px;
+    vertical-align: middle;
 }
 
 header nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 header nav ul li {
@@ -35,7 +42,7 @@ header nav ul li a {
 }
 
 section {
-    padding: 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
@@ -72,7 +79,14 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+}
+
+@media (min-width: 768px) {
+    header nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    header nav ul li {
+        margin: 0 20px;
+    }
 }
